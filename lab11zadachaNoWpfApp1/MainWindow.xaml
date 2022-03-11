@@ -1,0 +1,41 @@
+﻿<Window x:Class="lab11zadachaNoWpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab11zadachaNoWpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600">
+    <Window.Resources>
+        <Style TargetType="Path">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Fill" Value="Red"/>
+            <Setter Property="Stroke" Value="Black"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Path>
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Union">
+                    <CombinedGeometry.Geometry1>
+                        <CombinedGeometry GeometryCombineMode="Exclude">
+                            <CombinedGeometry.Geometry1>
+                                <EllipseGeometry Center="300,300" RadiusX="250" RadiusY="250"></EllipseGeometry>
+                            </CombinedGeometry.Geometry1>
+                            <CombinedGeometry.Geometry2>
+                                <EllipseGeometry Center="300,300" RadiusX="200" RadiusY="200"></EllipseGeometry>
+                            </CombinedGeometry.Geometry2>
+                        </CombinedGeometry>
+                    </CombinedGeometry.Geometry1>
+                    <CombinedGeometry.Geometry2>
+                        <RectangleGeometry Rect="50,-180 450,60">
+                            <RectangleGeometry.Transform>
+                                <RotateTransform Angle="135" CenterX="185" CenterY="85"></RotateTransform>
+                            </RectangleGeometry.Transform>
+                        </RectangleGeometry>
+                    </CombinedGeometry.Geometry2>
+                </CombinedGeometry>
+            </Path.Data>
+        </Path>
+    </StackPanel>
+</Window>
